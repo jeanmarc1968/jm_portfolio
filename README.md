@@ -8,4 +8,7 @@ Début du travail le 07 septembre 2018
 ### Admin et BDD (création de la table utilisateur et arbo de l'admin)
 
 ## Technologies utilisées :
-PHP  
+PHP 7
+HTML 5
+CSS 3
+
