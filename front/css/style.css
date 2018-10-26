@@ -1,0 +1,18 @@
+@charset "UTF-8";
+ 
+body {
+    background: rgba(255, 255, 0, 0.712);
+} 
+
+.jumbotron {
+    background: rgba(79, 128, 0, 0.753);
+}
+ 
+.table {
+    background: rgb(0, 128, 90);
+    /* color: red; */
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
