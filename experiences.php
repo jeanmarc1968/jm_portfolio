@@ -42,7 +42,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
 
 <h1 class="text-center">Mes expériences</h1>
 
- <div class="tableau text-center">
+ <div class="tableau text-center col-9 mx-auto">
         <table border="1" class="table">
         <caption>La liste des experiences : <?php echo $nbr_experiences; ?></caption>
         <thead class="thead-dark">

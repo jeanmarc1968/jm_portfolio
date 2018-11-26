@@ -75,26 +75,28 @@ $ligne_utilisateur= $sql->fetch(); //va chercher
 <body>
 <?php require 'navigation.php'; ?>
     <h1 class="text-center mt-4">Mise à jour d'une expérience</h1>
-    <div class="col-3 bg-dark text-white m-auto card">
+    <div class="col-4 bg-dark text-white m-auto card">
          <!-- mise à jour formulaire -->
          <div class="form-row">
-        <form action="modif_experience.php" method="post">
-            <div class="form-group col-4">
+        <form action="modif_experience.php" method="post" class="px-4 py-3">
+        <div class="form-row">
+            <div class="form-group col-xl-4 col-md-12">
                 <label for="titre">Titre Expériences</label>
                 <input type="text" name="titre" class="form-control" value="<?php echo $ligne_experience['titre']; ?>" required>
             </div>
 
-          <div class="form-group col-4">
+          <div class="form-group col-xl-4 col-md-6">
             <label for="stitre">Sous-titre</label>
             <input type="text" name="stitre" class="form-control" value="<?php echo $ligne_experience['stitre']; ?>" required>  
         </div>
    
-        <div class="form-group col-4">
+        <div class="form-group col-xl-4 col-md-6">
             <label for="dates">Dates</label>
             <input type="text" name="dates" class="form-control" value="<?php echo $ligne_experience['dates']; ?>" required>  
         </div>
         
-        <div class="form-group col-12">
+        <div class="form-row">
+        <div class="form-group col-xl-12 col-md-12">
             <label for="description">Description</label>
             <textarea type="text" name="description" class="form-control" required><?php echo $ligne_experience['description']; ?></textarea>
             <script>
@@ -103,14 +105,17 @@ $ligne_utilisateur= $sql->fetch(); //va chercher
                 CKEDITOR.replace( 'description' );
             </script>
         </div>
-        
-            <div class="form-group">
+        </div>
+
+            <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
             <input type="hidden" name="id_experience" value="<?php echo $ligne_experience['id_experience']; ?>">
-                <button type="submit" class="btn btn-success">mettre à jour</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i> -mettre à jour</button>
+            </div>
             </div>
         </form>
         </div>
-    </div>
+    
 </body>
     <!-- js pour les composants boostrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

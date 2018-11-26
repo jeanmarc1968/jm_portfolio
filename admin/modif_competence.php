@@ -72,22 +72,22 @@ $ligne_utilisateur = $sql->fetch(); //va chercher
     <h1 class="text-center mt-4">Mise à jour d'une compétence</h1>
 
      <!-- mise à jour formulaire -->
-    <div class="col-3 bg-dark text-white m-auto card">
+    <div class="col-6 bg-dark text-white m-auto card">
         <form action="modif_competence.php" method="post" class="px-4 py-3">
         <div class="form-row">
-            <div class="form-group col-5">
+            <div class="form-group col-xl-4 col-md-12">
                 <label for="competence">Compétence</label>
                 <input type="text" name="competence"  class="form-control" value="<?php echo $ligne_competence['competence']; ?>" required>
             </div>
     
-            <div class="form-group col-2">
+            <div class="form-group col-xl-4 col-md-6">
                 <label for="niveau">Niveau</label>
                 <input type="text" name="niveau" class=form-control value="<?php echo $ligne_competence['niveau']; ?>" required>
             </div>
     
-            <div class="form-group col-5">
+            <div class="form-group col-xl-4 col-md-6">
                 <label for="categorie">Catégorie</label>
-                <select name="categorie">
+                <select name="categorie" class="form-control">
                     <option value="Développement"
                     <?php //pour ajouter selected="selected" à la balise option si c'est la cat. de la compétence
                             if(!(strcmp("Développement", $ligne_competence['categorie']))) { //strcmp compare deux chaînes de caractères
@@ -108,9 +108,12 @@ $ligne_utilisateur = $sql->fetch(); //va chercher
                         ?>>Integration</option>
                 </select>
             </div>
-            <div class="col-3 bg-dark text-white">
-            <input type="hidden" name="id_competence" value="<?php echo $ligne_competence['id_competence']; ?>">
-                <button type="submit" class="btn btn-success">mettre à jour</button>
+                </div>
+            <div class="form-row">
+                <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
+                <input type="hidden" name="id_competence" value="<?php echo $ligne_competence['id_competence']; ?>">
+                <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i>- mettre à jour</button>
+                </div>
             </div>
         </form>
         </div>                    

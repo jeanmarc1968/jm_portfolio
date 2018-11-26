@@ -101,14 +101,14 @@ if(isset($_GET['id_competence'])) { // on récupère le competence dans l'url pa
           $nbr_competences = $sql->rowCount();  
     ?>
 <h1 class="text-center mt-4">Mes compétences</h1>
- <div class="tableau table-center text-center col-9 mx-auto">
-        <table border="1" class="table text-center" >
+ <div class="tableau table-center text-center col-6 mx-auto">
+        <table border="1" class="table table-striped table-hover" >
         <caption>La liste des compétences : <?php echo $nbr_competences; ?></caption>
         <thead class="thead-dark">
             <tr>
-                <th>Compétences <a href="competences.php?column=competence&order=asc"><i class="fas fa-arrow-circle-down"></i></a>| <a href="competences.php?column=competence&order=desc"><i class="fas fa-arrow-circle-up"></i> </a></th>
+                <th>Compétences <a href="competences.php?column=competence&order=asc"><i class="fas fa-arrow-circle-down"></i></a>| <a href="competences.php?column=competence&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
                 <th>Niveau <a href="competences.php?column=niveau&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="competences.php?column=niveau&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
-                <th>Catégorie <a href="competences.php?column=categorie&order=asc"><i class="fas fa-arrow-circle-down"></i> </a> | <a href="competences.php?column=categorie&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>Catégorie <a href="competences.php?column=categorie&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="competences.php?column=categorie&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
                 <th>Modifier</th>
                 <th>Suppression</th>
             </tr>
@@ -121,7 +121,7 @@ if(isset($_GET['id_competence'])) { // on récupère le competence dans l'url pa
                 <td><?php echo $ligne_competence['competence']; ?></td>
                 <td><?php echo $ligne_competence['niveau']; ?></td>
                 <td><?php echo $ligne_competence['categorie']; ?></td>
-                <td><a style="color: blue" href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-edit"></a></td>
+                <td><a style="color: blue" href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-edit"></i></a></td>
                 <td><a style="color: red" href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
         <?php
@@ -134,19 +134,19 @@ if(isset($_GET['id_competence'])) { // on récupère le competence dans l'url pa
 <h1 class="text-center mt-4">Formulaire d'insertion d'une compétence</h1>
    <div class="col-4 bg-dark text-white m-auto card">
         <!-- insertion d'une nouvelle compétence formulaire -->
-        <form action="competences.php" method="post" class="px-4 py-3">
+        <form action="competences.php" method="post" class="p-2">
         <div class="form-row">
-        <div class="form-group col-5">
+        <div class="form-group col-xl-4 col-md-12">
             <label for="competence">Compétence</label>
             <input type="text" name="competence" class="form-control" placeholder="Nouvelle compétence" required>
         </div>
         
-        <div class="form-group col-2">
+        <div class="form-group col-xl-4 col-md-6">
             <label for="niveau">Niveau</label>
             <input type="text" name="niveau" class="form-control" placeholder="niveau en chiffre" required>
         </div>
     
-        <div class="form-group col-5">
+        <div class="form-group col-xl-4 col-md-6">
             <label for="categorie">Catégorie</label>
             <select name="categorie" class="custom-select">
                     <option value="Développement">Développement</option>
@@ -155,8 +155,10 @@ if(isset($_GET['id_competence'])) { // on récupère le competence dans l'url pa
             </select>
         </div>
         </div>
-        <div class="">
-           <button type="submit" class="btn btn-success">Insérer une compétence</button>
+
+        <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
+           <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i>- Insérer une compétence</button>
         </div>
         </form>
    </div>

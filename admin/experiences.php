@@ -98,17 +98,17 @@ if(isset($_GET['id_experience'])) { // on récupère le competence dans l'url pa
           $nbr_experiences = $sql->rowCount();  
     ?>
 
-<h1 class="text-center">Mes expériences</h1>
+<h1 class="text-center mt-4">Mes expériences</h1>
 
- <div class="tableau text-center">
-        <table border="1" class="table">
+ <div class="text-center">
+        <table border="1" class="table table-striped table-hover">
         <caption>La liste des experiences : <?php echo $nbr_experiences; ?></caption>
         <thead class="thead-dark">
             <tr>
-                <th>experiences <a href="experiences.php?column=titre&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=titre&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
-                <th>sous-titre <a href="experiences.php?column=stitre&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=stitre&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
-                <th>dates <a href="experiences.php?column=dates&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=dates&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
-                <th>description <a href="experiences.php?column=description&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=description&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>Experiences <a href="experiences.php?column=titre&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=titre&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>Sous-titre <a href="experiences.php?column=stitre&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=stitre&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>Dates <a href="experiences.php?column=dates&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=dates&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>Description <a href="experiences.php?column=description&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="experiences.php?column=description&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
                 <th>Modifier</th>
                 <th>Suppression</th>
             </tr>
@@ -123,7 +123,7 @@ if(isset($_GET['id_experience'])) { // on récupère le competence dans l'url pa
                 <td><?php echo $ligne_experience['stitre']; ?></td>
                 <td><?php echo $ligne_experience['dates']; ?></td>
                 <td><?php echo $ligne_experience['description']; ?></td>
-                <td><a style="color: blue" href="modif_experience.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>"><i class="fas fa-edit"></a></td>
+                <td><a style="color: blue" href="modif_experience.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>"><i class="fas fa-edit"></i></a></td>
                 <td><a style="color: red" href="experiences.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
         <?php
@@ -136,39 +136,42 @@ if(isset($_GET['id_experience'])) { // on récupère le competence dans l'url pa
 
 <hr>
 <h1 class="text-center">Insérer une expérience</h1>
-   <div class="mx-auto col-6 bg-dark text-white">
+   <div class="mx-auto col-xl-6 col-md-12 col-sm-12 bg-dark text-white">
         <!-- insertion d'une nouvelle experience formulaire -->
-        <form action="experiences.php" class="px-4 py-3"  method="post">
-        <div class="form-row">
-        <div class="form-group col">
-            <label for="titre">Expériences</label>
-            <input type="text" name="titre" class="form-control" placeholder="Nouvelle experience" required>
-        </div>
-        
-        <div class="form-group col">
-            <label for="stitre">sous-titre</label>
-            <input type="text" name="stitre" class="form-control" placeholder="" required>
-        </div>
+        <form action="experiences.php" class="p-2"  method="post">
+            <div class="form-row">
+                <div class="form-group col-xl-4 col-md-12">
+                    <label for="titre">Expériences</label>
+                    <input type="text" name="titre" class="form-control" placeholder="Nouvelle experience" required>
+                </div>
+                
+                <div class="form-group col-xl-4 col-md-6">
+                    <label for="stitre">Sous-titre</label>
+                    <input type="text" name="stitre" class="form-control" placeholder="" required>
+                </div>
 
-        <div class="form-group col">
-            <label for="dates">Dates</label>
-            <input type="text" name="dates" class="form-control" placeholder="Juin 1999 - Oct. 2018 ">  
-        </div>
-        </div>
-        <div class="form-group col">
-            <label for="description">Description</label>
-            <textarea type="text" name="description" class="form-control" id="description" required></textarea>
-            <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace( 'description' );
-            </script>
-        </div>
-    
-        
-        <div class="">
-           <button type="submit" class="btn btn-success">Insérer une expérience</button>
-        </div>
+                <div class="form-group col-xl-4 col-md-6">
+                    <label for="dates">Dates</label>
+                    <input type="text" name="dates" class="form-control" placeholder="Juin 1999 - Oct. 2018 ">  
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12">
+                <label for="description">Description</label>
+                <textarea type="text" name="description" class="form-control" id="description" required></textarea>
+                <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor
+                    // instance, using default configuration.
+                    CKEDITOR.replace( 'description' );
+                </script>
+            </div>
+            </div>
+            
+            <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
+            <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i> - Insérer une expérience</button>
+            </div>
+            </div>
         </form>
     </div>
     </div> <!-- fin container -->

@@ -39,7 +39,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
           $nbr_competences = $sql->rowCount();  
     ?>
 <h1 class="text-center mt-4">Mes compétences</h1>
- <div class="tableau table-center text-center col-9 mx-auto">
+ <div class="tableau table-center text-center col-6 mx-auto">
         <table border="1" class="table text-center" >
         <caption>La liste des compétences : <?php echo $nbr_competences; ?></caption>
         <thead class="thead-dark">

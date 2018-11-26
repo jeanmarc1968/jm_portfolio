@@ -47,9 +47,9 @@ if(isset($_GET['order']) && isset($_GET['column'])){
         <thead class="thead-dark">
             <tr>
                 <th>formation <a href="formations.php?column=titre&order=asc"> <i class="fas fa-arrow-circle-down"></i></a> | <a href="formations.php?column=titre&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
-                <th>sous-titre <a href="formations.php?column=sous_titre&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="formations.php?column=sous_titre&order=desc"><i class="fas fa-arrow-circle-up"></i> </a></th>
-                <th>dates <a href="formations.php?column=dates&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="formations.php?column=dates&order=desc"><i class="fas fa-arrow-circle-up"></i> </a></th>
-                <th>description <a href="formations.php?column=description&order=asc"><i class="fas fa-arrow-circle-down"></i></a>| <a href="formations.php?column=description&order=desc"><i class="fas fa-arrow-circle-up"></i> </a></th>
+                <th>sous-titre <a href="formations.php?column=sous_titre&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="formations.php?column=sous_titre&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>dates <a href="formations.php?column=dates&order=asc"><i class="fas fa-arrow-circle-down"></i></a> | <a href="formations.php?column=dates&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
+                <th>description <a href="formations.php?column=description&order=asc"><i class="fas fa-arrow-circle-down"></i></a>| <a href="formations.php?column=description&order=desc"><i class="fas fa-arrow-circle-up"></i></a></th>
                
             </tr>
         </thead>

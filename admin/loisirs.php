@@ -95,8 +95,8 @@ if(isset($_GET['id_loisir'])) { // on récupère le competence dans l'url par so
           $nbr_loisirs = $sql->rowCount();
     ?>
     <h1 class="text-center mt-4">Mes loisirs</h1>
-    <div class="tableau col-6 mx-auto">
-        <table border="1" class="table text-center">
+    <div class="tableau col-4 mx-auto">
+        <table border="1" class="table table-striped table-hover">
         <caption>La liste des loisirs : <?php echo $nbr_loisirs; ?></caption>
         <thead class="thead-dark">
             <tr>
@@ -112,7 +112,7 @@ if(isset($_GET['id_loisir'])) { // on récupère le competence dans l'url par so
         <tr>
             <td><?php echo $ligne_loisir['loisir']; ?></td>
             <td><a style="color: blue" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-edit"></i></a></td>
-            <td><a style="color: red" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-trash-alt"></a></td>
+            <td><a style="color: red" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
     <?php
         } //fin boucle while
@@ -127,19 +127,17 @@ if(isset($_GET['id_loisir'])) { // on récupère le competence dans l'url par so
     <div class="col-3 bg-dark text-white mx-auto">
         <!-- insertion d'une nouvelle formation formulaire -->
         <form action="loisirs.php" method="post">
-        <div class="px-4 py-3">
-            <label for="titre">Loisir</label>
-            <input type="text" name="titre" class="form-control" placeholder="Nouveau loisir" required>
-        <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace( 'description' );
-        </script>
+        <div class="form-row">
+            <div class="p-2">
+                <label for="loisir">Loisir</label>
+                <input type="text" name="loisir" class="form-control" placeholder="Nouveau loisir" required>
+            </div>
         </div>
-    
-        <div class="">
-           <button type="submit" class="btn btn-success">Insérer un loisir</button>
-        </div>
+
+         <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
+            <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i>- Insérer un loisir</button>
+            </div>
         </form>
     </div>
     </div> <!-- fin container -->

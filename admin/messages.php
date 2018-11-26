@@ -3,12 +3,14 @@
 
 // insertion
 if(isset($_POST['nom'])){// si on a reçu un nouveau    
-    if($_POST['nom'] !="" && $_POST['email'] != "" && $_POST['sujet'] != "" && $_POST['message'] != ""){        $nom = addslashes($_POST['nom']);
+    if($_POST['nom'] !="" && $_POST['email'] != "" && $_POST['sujet'] != "" && $_POST['message'] != ""){ 
+       $nom = addslashes($_POST['nom']);
        $email = addslashes($_POST['email']);
        $sujet = addslashes($_POST['sujet']);
        $message = addslashes($_POST['message']);
 
-       $pdoCV -> exec("INSERT INTO t_messages VALUES (NULL, '$nom', '$email', '$sujet', '$message')");        header("location: ../front/index.php");
+       $pdoCV -> exec("INSERT INTO t_messages VALUES (NULL, '$nom', '$email', '$sujet', '$message')");        
+       header("location: ../front/index.php");
        exit();    
     } // fin if !=""}// fin $_POST reception
 } // ferme le if isset

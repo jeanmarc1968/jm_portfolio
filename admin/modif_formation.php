@@ -71,22 +71,22 @@ $ligne_formation = $sql->fetch(); //va chercher
          <!-- mise à jour formulaire -->
         <form action="modif_formation.php" method="post">
         <div class="form-row">
-            <div class="form-group col-4">
+            <div class="form-group col-xl-4 col-md-12">
                 <label for="titre">Titre Formations</label>
                 <input type="text" name="titre"  class="form-control" value="<?php echo $ligne_formation['titre']; ?>" required>
             </div>
 
-          <div class="form-group col-4">
+          <div class="form-group col-xl-4 col-md-6">
             <label for="sous_titre">Sous-titre</label>
             <input type="text" name="sous_titre" class="form-control" value="<?php echo $ligne_formation['sous_titre']; ?>" required>  
         </div>
    
-        <div class="form-group col-4">
+        <div class="form-group col-xl-4 col-md-6">
             <label for="dates">Dates</label>
             <input type="text" name="dates" class="form-control" value="<?php echo $ligne_formation['dates']; ?>" required>  
         </div>
         
-        <div class="form-group col-12">
+        <div class="form-group col-xl-12 col-md-12">
             <label for="description">Description</label>
             <textarea type="text" name="description" class="form-control" id="description" required><?php echo $ligne_formation['description']; ?></textarea>
             <script>
@@ -96,9 +96,9 @@ $ligne_formation = $sql->fetch(); //va chercher
             </script>
         </div>
         </div>
-            <div class="form-group">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
             <input type="hidden" name="id_formation" value="<?php echo $ligne_formation['id_formation']; ?>">
-                <button type="submit" class="btn btn-success">mettre à jour</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i>- mettre à jour</button>
             </div>
         </form>
     </div>

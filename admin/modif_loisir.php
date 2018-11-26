@@ -69,15 +69,17 @@ $ligne_loisir = $sql->fetch(); //va chercher
     <h1 class="text-center mt-4">Mise à jour d'un loisir</h1>
     <div class="col-3 bg-dark text-white mx-auto">
          <!-- mise à jour formulaire -->
-        <form action="modif_loisir.php" class="px-4 py-3" method="post">
-            <div class="form-group col">
+        <form action="modif_loisir.php" class="p-2" method="post">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
                 <label for="loisir">Loisir</label>
                 <input type="text" name="loisir" class="form-control" value="<?php echo $ligne_loisir['loisir']; ?>" required>
             </div>
         
-            <div class="form-group col">
+            <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
             <input type="hidden" name="id_loisir" class="form-control" value="<?php echo $ligne_loisir['id_loisir']; ?>">
-                <button type="submit" class="btn btn-success">mettre à jour</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i>- mettre à jour</button>
+            </div>
             </div>
         </form>
     </div>

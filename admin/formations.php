@@ -100,8 +100,8 @@ if(isset($_GET['id_formation'])) { // on récupère le competence dans l'url par
 <?php require 'navigation.php'; ?>
    
     <h1 class="text-center mt-4">Mes formations</h1>
- <div class="tableau col-9 mx-auto">
-        <table border="1" class="table text-center">
+ <div class="tableau col-6 mx-auto">
+        <table border="1" class="table table-striped table-hover">
         <caption>La liste des formations : <?php echo $nbr_formations; ?></caption>
         <thead class="thead-dark">
             <tr>
@@ -135,41 +135,44 @@ if(isset($_GET['id_formation'])) { // on récupère le competence dans l'url par
  </div>
 
 <hr>
-    <h1 class="text-center mt-4">nouvelle formation</h1>
-   <div class="mx-auto col-6 bg-dark text-white">
+    <h1 class="text-center mt-4">Nouvelle formation</h1>
+    <div class="mx-auto col-xl-6 col-md-12 col-sm-12 bg-dark text-white">
         <!-- insertion d'une nouvelle formation formulaire -->
-        <form action="formations.php" method="post" class="px-4 py-3">
+        <form action="formations.php" method="post" class="p-2">
         <div class="form-row">
-        <div class="form-group col-4">
-            <label for="titre">Formation</label>
-            <input type="text" name="titre" class="form-control" placeholder="Nouvelle formation" required>
-        </div>
-        
-        <div class="form-group col-4">
-            <label for="sous_titre">sous-titre</label>
-            <input type="text" name="sous_titre" class="form-control" placeholder="Integrateur developpeur WEB" required>
-        </div>
+            <div class="form-group col-xl-4 col-md-12">    
+                <label for="titre">Formation</label>
+                <input type="text" name="titre" class="form-control" placeholder="Nouvelle formation" required>
+            </div>
+            
+            <div class="form-group col-xl-4 col-md-6">
+                <label for="Sous_titre">sous-titre</label>
+                <input type="text" name="sous_titre" class="form-control" placeholder="Integrateur developpeur WEB" required>
+            </div>
 
-        <div class="form-group col-4">
-            <label for="dates">Dates</label>
-            <input type="text" name="dates" class="form-control" placeholder="Juin - Oct. 2018 ">  
-        </div>
-        
-        <div class="form-group col">
-            <label for="description">Description</label>
-            <textarea type="text" name="description" class="form-control" id="description" required></textarea>
-            <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
-                // instance, using default configuration.
-                CKEDITOR.replace( 'description' );
-            </script>
-        </div>
-    
-        <div class="">
-           <button type="submit" class="btn btn-success">Insérer une formation</button>
+            <div class="form-group col-xl-4 col-md-6">
+                <label for="dates">Dates</label>
+                <input type="text" name="dates" class="form-control" placeholder="Juin - Oct. 2018 ">  
+            </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group col-xl-12 col-md-12">
+                <label for="description">Description</label>
+                <textarea type="text" name="description" class="form-control" id="description" required></textarea>
+                <script>
+                    // Replace the <textarea id="editor1"> with a CKEditor
+                    // instance, using default configuration.
+                    CKEDITOR.replace( 'description' );
+                </script>
+            </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-xl-12 col-md-12 col-sm-12 text-center">
+                <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i> - Insérer une formation</button>
+            </div>
         </div>
         </form>
-        </div>
     </div>
     </div> <!-- fin container -->
 
