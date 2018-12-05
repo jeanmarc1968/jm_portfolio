@@ -1,11 +1,18 @@
+<?php require 'admin/connexion.php'; ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>John Doe - UX Designer & Front End Developer</title>
-<meta name="description" content="">
-<meta name="author" content="">
+<?php 
+      //requête pour une seule info
+      $sql = $pdoCV->query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1' ");
+      $ligne_utilisateur = $sql->fetch();
+      ?>
+<title><?php echo $ligne_utilisateur['prenom'].' '.$ligne_utilisateur['nom']; ?> - UX Designer & Front End Developer</title>
+<meta name="description" content="Jean-Marc Bon">
+<meta name="author" content="Jean-Marc Bon">
 
 <!-- Favicons
     ================================================== -->
@@ -26,6 +33,7 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="js/modernizr.custom.js"></script>
 
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -41,8 +49,8 @@
     <div class="container">
       <div class="row">
         <div class="intro-text">
-          <h1>Hello, I'm <span class="name">John Doe</span></h1>
-          <p>UX Designer & Front End Developer</p>
+          <h1>Bonjour, je suis Bon <br> <span class="name"><?php echo $ligne_utilisateur['prenom'].' '.$ligne_utilisateur['nom']; ?> </span></h1>
+          <p>Intégrateur Développeur Web</p>
           <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
       </div>
     </div>
