@@ -9,7 +9,13 @@
       //requête pour une seule info
       $sql = $pdoCV->query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1' ");
       $ligne_utilisateur = $sql->fetch();
-      ?>
+      
+
+      // requetes pour chercher compétences
+      $sql = $pdoCV -> prepare("SELECT * FROM t_competences WHERE id_utilisateur = 1 ORDER BY competence ASC");
+      $sql -> execute();
+?>
+
 <title><?php echo $ligne_utilisateur['prenom'].' '.$ligne_utilisateur['nom']; ?> - UX Designer & Front End Developer</title>
 <meta name="description" content="Jean-Marc Bon">
 <meta name="author" content="Jean-Marc Bon">
@@ -51,7 +57,7 @@
         <div class="intro-text">
           <h1>Bonjour, je suis Bon <br> <span class="name"><?php echo $ligne_utilisateur['prenom'].' '.$ligne_utilisateur['nom']; ?> </span></h1>
           <p>Intégrateur Développeur Web</p>
-          <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+          <a href="#about" class="btn btn-default btn-lg page-scroll">Plus d'infos</a> </div>
       </div>
     </div>
   </div>
@@ -62,28 +68,31 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
-        <a class="navbar-brand page-scroll" href="#page-top">John Doe</a> </div>
+        <a class="navbar-brand page-scroll" href="#page-top"><?php echo $ligne_utilisateur['prenom'].' '.$ligne_utilisateur['nom']; ?></a> </div>
       
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
         <ul class="nav navbar-nav">
           <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
           <li class="hidden"> <a href="#page-top"></a> </li>
-          <li> <a class="page-scroll" href="#about">About</a> </li>
-          <li> <a class="page-scroll" href="#skills">Skills</a> </li>
+          <li> <a class="page-scroll" href="#"></a> </li>
+          <li> <a class="page-scroll" href="#skills">Compétences</a> </li>
           <li> <a class="page-scroll" href="#portfolio">Portfolio</a> </li>
-          <li> <a class="page-scroll" href="#resume">Resume</a> </li>
+          <li> <a class="page-scroll" href="#resume">Expériences</a> </li>
           <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+          <!-- <li> <a class="page-scroll" href="#CV">CV</a> </li> -->
         </ul>
       </div>
     </div>
   </nav>
 </div>
 <!-- About Section -->
-<div id="about">
+<div id="about" >
   <div class="container">
     <div class="section-title text-center center">
-      <h2>About Me</h2>
+
+      <h2>A propos de moi</h2>
+      
       <hr>
     </div>
     <div class="row">
@@ -92,7 +101,9 @@
         <div class="about-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
+      
           <p class="text-center"><a class="btn btn-primary" href="#"><i class="fa fa-download"></i> Download Resume</a></p>
+      
         </div>
       </div>
     </div>
@@ -102,28 +113,22 @@
 <div id="skills" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>Skills</h2>
+      <h2>Compétences</h2>
       <hr>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="95"> <span class="percent">95</span> </span>
+      <!-- <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="95"> <span class="percent">95</span> </span>
         <h4>HTML5</h4>
+      </div> -->
+      <?php 
+          while($ligne_competence = $sql -> fetch())
+          {
+      ?>
+     <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="<?php echo $ligne_competence['niveau']; ?>"> <span class="percent"><?php echo $ligne_competence['niveau']; ?></span> </span>
+        <h4><?php echo $ligne_competence['competence']; ?></h4>
       </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="85"> <span class="percent">85</span> </span>
-        <h4>CSS3</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="80"> <span class="percent">80</span> </span>
-        <h4>jQuery</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="80"> <span class="percent">80</span> </span>
-        <h4>WordPress</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="70"> <span class="percent">70</span> </span>
-        <h4>Photoshop</h4>
-      </div>
-      <div class="col-md-4 col-sm-6 skill"> <span class="chart" data-percent="65"> <span class="percent">65</span> </span>
-        <h4>Illustrator</h4>
-      </div>
+        <?php
+                } ?>
     </div>
   </div>
 </div>
@@ -391,19 +396,18 @@
     </div>
     <div class="col-md-8 col-md-offset-2">
       <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
-        <p>4321 California St,<br>
-          San Francisco, CA 12345</p>
+        <p><?php echo $ligne_utilisateur['adresse'].'<br>'. $ligne_utilisateur['code_postal'].' '.$ligne_utilisateur['ville']; ?></p>
       </div>
       <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
-        <p>info@company.com</p>
+        <p><?php echo $ligne_utilisateur['email']; ?></p>
       </div>
       <div class="col-md-4"> <i class="fa fa-phone fa-2x"></i>
-        <p> +1 123 456 1234</p>
+        <p><?php echo $ligne_utilisateur['portable']; ?></p>
       </div>
       <div class="clearfix"></div>
     </div>
     <div class="col-md-8 col-md-offset-2">
-      <h3>Leave me a message</h3>
+      <h3>Laissez moi un message</h3>
       <form name="sentMessage" id="contactForm" novalidate>
         <div class="row">
           <div class="col-md-6">
@@ -424,7 +428,7 @@
           <p class="help-block text-danger"></p>
         </div>
         <div id="success"></div>
-        <button type="submit" class="btn btn-default">Send Message</button>
+        <button type="submit" class="btn btn-default">Envoyez Message</button>
       </form>
       <div class="social">
         <ul>
@@ -442,7 +446,7 @@
 <div id="footer">
   <div class="container text-center">
     <div class="fnav">
-      <p>Copyright &copy; 2016 John Doe. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+      <p>Copyright &copy; 2018 Jean-Marc BON. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
     </div>
   </div>
 </div>
