@@ -122,7 +122,7 @@ if(isset($_GET['id_experience'])) { // on récupère le competence dans l'url pa
                 <td><?php echo $ligne_experience['titre']; ?></td>
                 <td><?php echo $ligne_experience['stitre']; ?></td>
                 <td><?php echo $ligne_experience['dates']; ?></td>
-                <td><?php echo $ligne_experience['description']; ?></td>
+                <td class="text-left"><?php echo $ligne_experience['description']; ?></td>
                 <td><a style="color: blue" href="modif_experience.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>"><i class="fas fa-edit"></i></a></td>
                 <td><a style="color: red" href="experiences.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
@@ -162,7 +162,7 @@ if(isset($_GET['id_experience'])) { // on récupère le competence dans l'url pa
                 <script>
                     // Replace the <textarea id="editor1"> with a CKEditor
                     // instance, using default configuration.
-                    CKEDITOR.replace( 'description' );
+                    CKEDITOR.replace ('description');
                 </script>
             </div>
             </div>

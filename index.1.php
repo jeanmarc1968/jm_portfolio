@@ -27,7 +27,6 @@
 <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
 <!-- Bootstrap -->
-<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
@@ -102,8 +101,8 @@
               <div class="col-md-12 text-center"><img src="img/man1.jpg" class="img-responsive"></div>
             <div class="col-md-8 col-md-offset-2"><!-- début .col-md-8 col-md-offset-2 -->
                 <div class="about-text">
-                    <p>J'ai intégré la formation Intégrateur Déveveloppeur Web d'une période de 10 mois, au sein du PoleS. Celle-ci m'a permis de découvrir et acquérir des connaissances dans les différents langages pour la conception de site.</p>  
-                    <p></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>  
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>
                     <p class="text-center"><a class="btn btn-primary" href="img/portfolio/CV2.pdf"><i class="fa fa-download"></i> Téléchargez mon CV</a></p>   
                 </div>
             </div><!-- fin .col-md-8 col-md-offset-2 -->
@@ -152,16 +151,16 @@
 <div id="portfolio">
   <div class="container">
     <div class="section-title text-center center">
-      <h2>Les dév du chantier de Pantin</h2>
+      <h2>Portfolio</h2>
       <hr>
     </div>
     <div class="categories">
       <ul class="cat">
         <li>
           <ol class="type">
-            <li><a href="#" data-filter="*" class="active">Tout le monde</a></li>
-            <li><a href="#" data-filter=".web">Les intégrateurs</a></li>
-            <li><a href="#" data-filter=".app">Les développeurs</a></li>
+            <li><a href="#" data-filter="*" class="active">All</a></li>
+            <li><a href="#" data-filter=".web">Web Design</a></li>
+            <li><a href="#" data-filter=".app">App Development</a></li>
             <li><a href="#" data-filter=".branding">Branding</a></li>
           </ol>
         </li>
@@ -172,46 +171,46 @@
       <div class="portfolio-items">
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-            <div class="hover-bg"> <!-- <a href="img/portfolio/01-large.jpg" title="Project description" rel="prettyPhoto"> -->
-              <div class="hover-text" onclick="window.location='http://pmbaye.fr/';">
-                <h4>Papaoumar Ndaye</h4>
-                <small>Intégrateur</small> </div>
-              <img src="img/portfolio/papaoumar.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project description" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+                <small>Web Design</small> </div>
+              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 app">
           <div class="portfolio-item">
-            <div class="hover-bg"> <!-- <a href="img/portfolio/02-large.jpg" title="Project description" rel="prettyPhoto"> -->
-              <div class="hover-text" onclick="window.location='https://leslypm.net/';">
+            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project description" rel="prettyPhoto">
+              <div class="hover-text">
                 <h4>Project Title</h4>
                 <small>App Development</small> </div>
-              <img src="img/portfolio/lesly.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-            <div class="hover-bg"> <!-- <a href="img/portfolio/03-large.jpg" title="Project description" rel="prettyPhoto"> -->
-              <div class="hover-text" onclick="window.location='https://www.mtbenkherouf.com/';">
-                <h4>Tarek Benkherouf </h4>
-                <small>Intégrateur</small> </div>
-              <img src="img/portfolio/tarek.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project description" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+                <small>Web Design</small> </div>
+              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 web">
           <div class="portfolio-item">
-            <div class="hover-bg"> <!-- <a href="img/portfolio/04-large.jpg" title="Project description" rel="prettyPhoto"> -->
-              <div class="hover-text" onclick="window.location='http://kaslan.ma6tvacoder.org/ ';">
-                <h4>Kilic Aslan </h4>
-                <small>Intégrateur</small> </div>
-              <img src="img/portfolio/kilic.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project description" rel="prettyPhoto">
+              <div class="hover-text">
+                <h4>Project Title</h4>
+                <small>Web Design</small> </div>
+              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3 col-lg-3 app">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project description" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Lesly Poujaud Melot</h4>
-                <small>Développeur</small> </div>
+                <h4>Project Title</h4>
+                <small>App Development</small> </div>
               <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
@@ -250,7 +249,7 @@
 <div id="achievements" class="text-center">
   <div class="container">
     <div class="section-title center">
-      <h2>"Bien heureux celui qui fait un travail qu'il aime" <br><br> Edine-le-sage</h2>
+      <h2>Some Stats</h2>
       <hr>
     </div>
     <div class="row">
@@ -258,145 +257,91 @@
 </div>
 
 
-<!-- ------------------------------------------------------------------------------------------->
-
-
-
-
-
-
-
+<!--  Section Experiences professionnelles -->
 <div id="resume" class="text-center">
     <div class="container">
       <div class="section-title center">
-        <h2 style="color:black">Experiences professionnelles</h2>
+        <h2>Experiences professionnelles</h2>
         <hr>
       </div>
+
+      <div class="row">
+      <?php  $sql = $pdoCV -> prepare("SELECT * FROM t_experiences  WHERE id_utilisateur = 1 ORDER BY dates DESC");
+      $sql->execute();
+      $nbr_experiences = $sql->rowCount();
+       ?>
+      <?php 
+            while($ligne_experience = $sql -> fetch())
+            {
+        ?>
+        <div class="col-lg-12"><!-- début .col-lg-12 -->
+            <ul class="timeline">
+
+                <li>
+                  <div class="timeline-image">
+                    <h4><?php echo $ligne_experience['dates']; ?> </h4>
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4><?php echo $ligne_experience['titre']; ?></h4>
+                      <h4 class="subheading"><?php echo $ligne_experience['stitre']; ?></h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p><?php echo $ligne_experience['description']; ?></p>
+                    </div>
+                  </div>
+                </li>
+
+            </ul>
+        </div><!-- fin .col-lg-12 -->
+        <?php
+                } ?> <!-- fin de boucle !-->
+      </div>
+  </div>
+  
+  <div class="container">
+    <div class="section-title center">
+      <h2>Formations</h2>
+      <hr>
+    </div>
+   
     <div class="row">
+    <?php   // requetes pour chercher formations
+       $sql = $pdoCV -> prepare("SELECT * FROM t_formations WHERE id_utilisateur = 1");
+       $sql->execute();
+       $nbr_formations = $sql->rowCount(); ?>
+
+          <?php 
+            while($ligne_formation = $sql -> fetch())
+            {
+        ?>
+  
       <div class="col-lg-12">
         <ul class="timeline">
-
-          <?php
-          $dialogue = $pdoCV->query("SELECT * FROM t_experiences ORDER BY dates DESC");   //je récupère les informations de la bdd
-          while($info = $dialogue->fetch(PDO::FETCH_ASSOC)){ //je fetch les informations et je les parcours avec la boucle while
-              $index = $info['id_experience']; //je stock l'idplayer dans une variable index
-              if($index % 2 == 0) //si le reste de la division (index/2) est égal à 0 (c'est à dire un nombre paire) alors je lui associe la couleur rouge
-              {
-                  echo '
-                  <li>
-                    <div class="timeline-image">
-                      <h4>'.$info['dates'].' </h4>
-                    </div>
-                    <div class="timeline-panel">
-                      <div class="timeline-heading">
-                        <h4>'.$info['titre'].'</h4>
-                        <h4 class="subheading">'.$info['stitre'].'</h4>
-                      </div>
-                      <div class="timeline-body">
-                        <p>'.$info['description'].'</p>
-                      </div>
-                    </div>
-                  </li>
-                  ';
-              }else //si le reste de la division (index/2) est égal à 1 (c'est à dire un nombre impaire) alors je lui associe la couleur blueu
-              {
-                  echo '
-                    <li class="timeline-inverted">
-                      <div class="timeline-image">
-                        <h4>'.$info['dates'].'</h4>
-                      </div>
-                      <div class="timeline-panel">
-                        <div class="timeline-heading">
-                          <h4>'.$info['titre'].'</h4>
-                          <h4 class="subheading">'.$info['stitre'].'</h4>
-                        </div>
-                        <div class="timeline-body">
-                          <p>'.$info['description'].'</p>
-                        </div>
-                      </div>
-                    </li>
-                  ';
-              }
-          }
-          ?>
-
+          
+          <!-- Section Formations -->
+       
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <h4><?php echo $ligne_formation['dates']; ?></h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4><?php echo $ligne_formation['titre']; ?></h4>
+                <h4 class="subheading"><?php echo $ligne_formation['sous_titre']; ?></h4>
+              </div>
+              <div class="timeline-body">
+                <p><?php echo $ligne_formation['description']; ?></p>
+              </div>
+            </div>
+          </li>
+         
         </ul>
       </div>
+            <?php } ?>
     </div>
   </div>
-
-
-
-<!-- ------------------------------------------------------------------------------------------->
-
-<div id="resume" class="text-center">
-    <div class="container">
-      <div class="section-title center">
-        <h2 style="color:black">Formations</h2>
-        <hr>
-      </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <ul class="timeline">
-
-          <?php
-          $dialogue = $pdoCV->query("SELECT * FROM t_formations ORDER BY dates");   //je récupère les informations de la bdd
-          while($info = $dialogue->fetch(PDO::FETCH_ASSOC)){ //je fetch les informations et je les parcours avec la boucle while
-              $index = $info['id_formation']; //je stock l'idplayer dans une variable index
-              if($index % 2 == 0) //si le reste de la division (index/2) est égal à 0 (c'est à dire un nombre paire) alors je lui associe la couleur rouge
-              {
-                  echo '
-                  <li>
-                    <div class="timeline-image">
-                      <h4>'.$info['dates'].' </h4>
-                    </div>
-                    <div class="timeline-panel">
-                      <div class="timeline-heading">
-                        <h4>'.$info['titre'].'</h4>
-                        <h4 class="subheading">'.$info['sous_titre'].'</h4>
-                      </div>
-                      <div class="timeline-body">
-                        <p>'.$info['description'].'</p>
-                      </div>
-                    </div>
-                  </li>
-                  ';
-              }else //si le reste de la division (index/2) est égal à 1 (c'est à dire un nombre impaire) alors je lui associe la couleur blueu
-              {
-                  echo '
-                    <li class="timeline-inverted">
-                      <div class="timeline-image">
-                        <h4>'.$info['dates'].'</h4>
-                      </div>
-                      <div class="timeline-panel">
-                        <div class="timeline-heading">
-                          <h4>'.$info['titre'].'</h4>
-                          <h4 class="subheading">'.$info['sous_titre'].'</h4>
-                        </div>
-                        <div class="timeline-body">
-                          <p>'.$info['description'].'</p>
-                        </div>
-                      </div>
-                    </li>
-                  ';
-              }
-          }
-          ?>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  
-  
-
-
-
-
-
-
-
+</div>
 <!-- Section  Contact+ -->
 <div id="contact" class="text-center">
   <div class="container">

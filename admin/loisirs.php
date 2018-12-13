@@ -111,8 +111,8 @@ if(isset($_GET['id_loisir'])) { // on récupère le competence dans l'url par so
     ?>
         <tr>
             <td><?php echo $ligne_loisir['loisir']; ?></td>
-            <td><a style="color: blue" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-edit"></i></a></td>
-            <td><a style="color: red" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-trash-alt"></i></a></td>
+            <td class="text-center"><a style="color: blue" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-edit"></i></a></td>
+            <td class="text-center"><a style="color: red" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-trash-alt"></i></a></td>
         </tr>
     <?php
         } //fin boucle while

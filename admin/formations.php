@@ -123,8 +123,8 @@ if(isset($_GET['id_formation'])) { // on récupère le competence dans l'url par
                 <td><?php echo $ligne_formation['sous_titre']; ?></td>
                 <td><?php echo $ligne_formation['dates']; ?></td>
                 <td><?php echo $ligne_formation['description']; ?></td>
-                <td><a style="color: blue" href="modif_formation.php?id_formation=<?php echo $ligne_formation['id_formation']; ?>"><i class="fas fa-edit"></i></a></td>
-                <td><a  style="color: red" href="formations.php?id_formation=<?php echo $ligne_formation['id_formation']; ?>"><i class="fas fa-trash-alt"></i></a></td>
+                <td class="text-center"><a style="color: blue" href="modif_formation.php?id_formation=<?php echo $ligne_formation['id_formation']; ?>"><i class="fas fa-edit"></i></a></td>
+                <td class="text-center"><a style="color: red" href="formations.php?id_formation=<?php echo $ligne_formation['id_formation']; ?>"><i class="fas fa-trash-alt" ></i></a></td>
             </tr>
         <?php
             } //fin boucle while

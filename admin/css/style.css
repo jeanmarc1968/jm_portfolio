@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 body {
-    background: rgba(255, 255, 0, 0.712);
+    /* background: rgba(255, 255, 0, 0.712); */
+    background: lightgray;
 } 
 
 .jumbotron {
