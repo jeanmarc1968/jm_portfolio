@@ -183,8 +183,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <!-- <a href="img/portfolio/02-large.jpg" title="Project description" rel="prettyPhoto"> -->
               <div class="hover-text" onclick="window.location='https://leslypm.net/';">
-                <h4>Project Title</h4>
-                <small>App Development</small> </div>
+                <h4>Lesly Poujaud Melot</h4>
+                <small>Developpeur</small> </div>
               <img src="img/portfolio/lesly.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
@@ -210,8 +210,8 @@
           <div class="portfolio-item">
             <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project description" rel="prettyPhoto">
               <div class="hover-text">
-                <h4>Lesly Poujaud Melot</h4>
-                <small>Développeur</small> </div>
+                <h4>Le</h4>
+                <small>Dév</small> </div>
               <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
         </div>
@@ -445,7 +445,7 @@
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
           <li><a href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li><a href="#"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://github.com/jeanmarc1968"><i class="fa fa-github"></i></a></li>
           <li><a href="#"><i class="fa fa-instagram"></i></a></li>
           <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
         </ul>
